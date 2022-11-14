@@ -7,5 +7,5 @@ int numberA = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите второе число");
 int numberB = Convert.ToInt32(Console.ReadLine());
 if (numberA > numberB) Console.WriteLine($"max = {numberA}");
-else if (numberB > numberA) Console.WriteLine($"max = {numberB}");
-else Console.WriteLine("Данные числа равны ");
+else if (numberB > numberA) System.Console.WriteLine($"max = {numberB}");
+else System.Console.WriteLine("Данные числа равны ");
