@@ -23,16 +23,13 @@ double FindX(double num1, double num2, double num3, double num4)
 
 double FindY(double num1, double num2, double numX)
 {
-    double numY = num2*numX + num1;
+    double numY = num2 * numX + num1;
     return numY;
 }
 
 
 double numberX = FindX(numberB1, numberB2, numberK1, numberK2);
 double numberY = FindY(numberB1, numberK1, numberX);
-
-
-
 
 Console.Write($"b1 = {numberB1}, k1 = {numberK1}, b2 = {numberB2}, k2 = {numberK2} ");
 Console.WriteLine($"-> ({numberX} ; {numberY} )");
