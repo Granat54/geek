@@ -31,32 +31,40 @@ void PrintMatrix(int[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
 
-            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4}, ");
-            else Console.Write($"{matrix[i, j], 4}");
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j],4}, ");
+            else Console.Write($"{matrix[i, j],4}");
         }
         Console.WriteLine("|");
     }
 
 }
 
-int[,] SortMatrix(int [,]matrix)
+int[,] SortMatrix(int[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < matrix.GetLength(1)-1; j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if(matrix[i,j]<matrix[i,j+1]) 
+            for (int k = 0; k < matrix.GetLength(1)-1; k++)
+            {
+                if (matrix[i, k] < matrix[i, k + 1])
                 {
-                    int temp = matrix[i,j];
-                    matrix[i,j] = matrix [i,j+1];
-                    matrix[i,j+1] = temp;
-                    j=0;
-                    i=0;
+                    int temp = matrix[i, k + 1];
+                    matrix[i, k + 1] = matrix[i, k];
+                    matrix[i, k] = temp;
+                    i = 0;
+                    j = 0;
+                    k = 0;
                 }
+            }
+
         }
     }
     return matrix;
 }
+
+
+
 
 int[,] array2D = CreateMatrixRndInt(3, 4, 1, 9);
 PrintMatrix(array2D);
