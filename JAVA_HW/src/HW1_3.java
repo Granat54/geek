@@ -21,7 +21,7 @@ public class HW1_3 {
         if (hour >= 18 && hour < 23) {
             System.out.print("Добрый вечер " + name);
         }
-        if (hour >= 23 && hour < 5) {
+        if (hour >= 23 || hour < 5) {
             System.out.print("Доброй ночи " + name);
         }
 
