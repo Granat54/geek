@@ -36,7 +36,7 @@ public class HW3_3 {
 
         System.out.println(sb);
 
-        StringBuilder sb2 = new StringBuilder();
+
         for (int i = 0; i < list.size()-1; i++) {
             if (list.get(i).equals(list.get(i + 1))) {
                 list.remove(list.get(i));
