@@ -1,5 +1,3 @@
-import java.lang.reflect.Array;
-import java.util.function.Function;
 
 public class HW3_1 {
     public static void main(String[] args) {
